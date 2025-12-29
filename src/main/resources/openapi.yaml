@@ -405,6 +405,8 @@ paths:
           description: Validation exception
         default:
           description: Unexpected error
+      security:
+        - api_key: []
   /store/order/{orderId}:
     get:
       tags:
@@ -437,6 +439,8 @@ paths:
           description: Order not found
         default:
           description: Unexpected error
+      security:
+        - api_key: []
     delete:
       tags:
         - store
@@ -461,6 +465,8 @@ paths:
           description: Order not found
         default:
           description: Unexpected error
+      security:
+        - api_key: []
   /user:
     post:
       tags:
@@ -493,6 +499,8 @@ paths:
                 $ref: '#/components/schemas/User'
         default:
           description: Unexpected error
+      security:
+        - api_key: []
   /user/createWithList:
     post:
       tags:
@@ -520,6 +528,8 @@ paths:
                 $ref: '#/components/schemas/User'
         default:
           description: Unexpected error
+      security:
+        - api_key: []
   /user/login:
     get:
       tags:
@@ -565,6 +575,7 @@ paths:
           description: Invalid username/password supplied
         default:
           description: Unexpected error
+      security: []
   /user/logout:
     get:
       tags:
@@ -578,6 +589,8 @@ paths:
           description: successful operation
         default:
           description: Unexpected error
+      security:
+        - api_key: []
   /user/{username}:
     get:
       tags:
@@ -608,6 +621,8 @@ paths:
           description: User not found
         default:
           description: Unexpected error
+      security:
+        - api_key: []
     put:
       tags:
         - user
@@ -643,6 +658,8 @@ paths:
           description: user not found
         default:
           description: Unexpected error
+      security:
+        - api_key: []
     delete:
       tags:
         - user
@@ -665,6 +682,8 @@ paths:
           description: User not found
         default:
           description: Unexpected error
+      security:
+        - api_key: []
 components:
   schemas:
     Order:
