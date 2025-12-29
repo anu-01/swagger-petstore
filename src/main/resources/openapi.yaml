@@ -500,9 +500,7 @@ paths:
         default:
           description: Unexpected error
       security:
-        - petstore_auth:
-            - write:pets
-            - read:pets
+        - api_key: []
   /user/createWithList:
     post:
       tags:
@@ -531,9 +529,7 @@ paths:
         default:
           description: Unexpected error
       security:
-        - petstore_auth:
-            - write:pets
-            - read:pets
+        - api_key: []
   /user/login:
     get:
       tags:
@@ -594,9 +590,7 @@ paths:
         default:
           description: Unexpected error
       security:
-        - petstore_auth:
-            - write:pets
-            - read:pets
+        - api_key: []
   /user/{username}:
     get:
       tags:
@@ -628,9 +622,7 @@ paths:
         default:
           description: Unexpected error
       security:
-        - petstore_auth:
-            - write:pets
-            - read:pets
+        - api_key: []
     put:
       tags:
         - user
@@ -667,9 +659,7 @@ paths:
         default:
           description: Unexpected error
       security:
-        - petstore_auth:
-            - write:pets
-            - read:pets
+        - api_key: []
     delete:
       tags:
         - user
@@ -693,9 +683,7 @@ paths:
         default:
           description: Unexpected error
       security:
-        - petstore_auth:
-            - write:pets
-            - read:pets
+        - api_key: []
 components:
   schemas:
     Order:
